@@ -1,3 +1,5 @@
+[![GitHub version](https://badge.fury.io/gh/SolarisFlare%2Fdtg.svg)](https://badge.fury.io/gh/SolarisFlare%2Fdtg)
+
 # Dtg
 Short description and motivation.
 
