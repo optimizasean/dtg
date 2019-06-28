@@ -1,5 +1,5 @@
 [![GitHub version](https://badge.fury.io/gh/SolarisFlare%2Fdtg.svg)](https://badge.fury.io/gh/SolarisFlare%2Fdtg)
-[![Build Status](https://travis-ci.com/SolarisFlare/dtg.svg?branch=master)](https://travis-ci.com/SolarisFlare/dtg)
+[![Build Status](https://travis-ci.org/SolarisFlare/dtg.svg?branch=master)](https://travis-ci.org/SolarisFlare/dtg)
 
 # Dtg
 Short description and motivation.
