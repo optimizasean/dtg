@@ -22,8 +22,6 @@ PreCommit:
       - "test/dummy/**/*"
   Fasterer:
     enabled: true
-  HamlLint:
-    enabled: true
   AllRailsBestPractices:
     enabled: true
     description: "Analyze entire project with RailsBestPractices"
@@ -37,9 +35,12 @@ PreCommit:
     flags: ["--single-line", "--no-color", "--force-exclusion"]
   RuboCop:
     enabled: true
+    exlude:
+      - "dtg.gemspec"
   TrailingWhitespace:
     enabled: true
     exclude:
+      - "dtg.gemspec"
       - "test/dummy"
   Standardrb:
     enabled: true
