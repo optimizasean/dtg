@@ -14,11 +14,9 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 group :development, :test do
-  gem "brakeman"
   gem "cadre"
   gem "fasterer"
   gem "guard"
-  gem "guard-brakeman"
   gem "guard-reek"
   gem "guard-rspec"
   gem "guard-rubocop"
