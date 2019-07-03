@@ -1,6 +1,6 @@
 require "guard/compat/plugin""
 
-module::Guard
+module ::Guard
   class RailsBestPractices < Plugin
     attr_reader :ui
 
