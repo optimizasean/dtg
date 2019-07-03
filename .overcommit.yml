@@ -1,0 +1,61 @@
+# Use this file to configure the Overcommit hooks you wish to use. This will
+# extend the default configuration defined in:
+# https://github.com/brigade/overcommit/blob/master/config/default.yml
+#
+# At the topmost level of this YAML file is a key representing type of hook
+# being run (e.g. pre-commit, commit-msg, etc.). Within each type you can
+# customize each hook, such as whether to only run it on certain files (via
+# `include`), whether to only display output if it fails (via `quiet`), etc.
+#
+# For a complete list of hooks, see:
+# https://github.com/brigade/overcommit/tree/master/lib/overcommit/hook
+#
+# For a complete list of options that you can use to customize hooks, see:
+# https://github.com/brigade/overcommit#configuration
+#
+# Uncomment the following lines to make the configuration take effect.
+
+PreCommit:
+  ExecutePermissions:
+    enabled: true
+    exclude:
+      - "test/dummy"
+  Fasterer:
+    enabled: true
+  HamlLint:
+    enabled: true
+  AllRailsBestPractices:
+    enabled: true
+    description: "Analyze entire project with RailsBestPractices"
+    required_executable: "rails_best_practices"
+    flags: ["--without-color", "-c", ".rails_best_practices.yml"]
+    install_command: "gem install rails_best_practices"
+  RailsSchemaUpToDate:
+    enabled: true
+  Reek:
+    enabled: true
+    flags: ["--single-line", "--no-color", "--force-exclusion"]
+  RuboCop:
+    enabled: true
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - "test/dummy"
+  Standardrb:
+    enabled: true
+    description: "Lint Ruby files with Standard(RB)"
+    include: "*.rb"
+    exclude:
+      - "test/dummy"
+
+PrePush:
+  Brakeman:
+    enabled: true
+
+PostCheckout:
+  IndexTags:
+    enabled: true # Generate a tags file with `ctags` each time HEAD changes
+
+PostCommit:
+  IndexTags:
+    enabled: true
