@@ -13,3 +13,20 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+group :development, :test do
+  gem "brakeman"
+  gem "cadre"
+  gem "fasterer"
+  gem "guard"
+  gem "guard-brakeman"
+  gem "guard-reek"
+  gem "guard-rspec"
+  gem "guard-rubocop"
+  gem "overcommit"
+  gem "rails_best_practices"
+  gem "reek"
+  gem "rspec"
+  gem "rubocop"
+  gem "rubocop-rspec"
+  gem "standard"
+end

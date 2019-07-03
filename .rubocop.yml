@@ -1,0 +1,70 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - "rubocop-rspec"
+  - "test_prof/rubocop"
+
+AllCops:
+  Exclude:
+    - "test/dummy"
+
+# Defer to StandardRB
+Lint:
+  Enabled: false
+Layout:
+  Enabled: false
+Style:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: 'never'
+
+Metrics/LineLength:
+  Exclude:
+  - "Gemfile"
+  - "test/dummy"
+  Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+  - "Gemfile"
+  - "Guardfile"
+  - "test/dummy"
+  - "spec/**/*.rb"
+
+Metrics/MethodLength:
+  Exclude:
+  - "test/dummy"
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Rails:
+  Enabled: true
+
+RSpec/AggregateFailures:
+  Enabled: true
+  Include:
+    - "spec/**/*.rb"
+
+RSpec/DescribeClass:
+  Exclude:
+  - "spec/views/**/*"
+  - "spec/routing/*"
+  - "spec/lib/tasks/**/*"
+  - "spec/features/**/*"
+  - "spec/config/initializers/**/*"
+
+RSpec/ExampleLength:
+  Max: 8
+  Exclude:
+  - "spec/features/**/*"
+
+RSpec/MultipleExpectations:
+  Max: 8
+  Exclude:
+  - "spec/features/**/*"
+
+RSpec/NestedGroups:
+  Max: 3
