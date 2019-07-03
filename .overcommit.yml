@@ -19,7 +19,7 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
-      - "test/dummy"
+      - "test/dummy/**/*"
   Fasterer:
     enabled: true
   HamlLint:
@@ -44,9 +44,9 @@ PreCommit:
   Standardrb:
     enabled: true
     description: "Lint Ruby files with Standard(RB)"
-    include: "*.rb"
+    include: "**/*.rb"
     exclude:
-      - "test/dummy"
+      - "test/dummy/**/*"
 
 PrePush:
   Brakeman:
