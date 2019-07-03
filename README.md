@@ -3,12 +3,83 @@
 [![Build Status](https://travis-ci.org/SolarisFlare/dtg.svg?branch=master)](https://travis-ci.org/SolarisFlare/dtg)
 
 # Dtg
-Short description and motivation.
+
+DTG is a ruby  gem to convert Time into DTG format.
+
+A DTG is a DateTimeGroup which is used in the military to save time.  DTG are saved in the format DDHHMML MMM YY, where D is day, H is hour, L is letter, M is month, and Y is year.  The Month is the 3 character representation such as JAN for January, MAY for May, DEC for December and so on.  Year is only the last two digits of the year e.g. 2019 is just 19.  The letter is the zone code such as W for whiskey which is HST, Z for zulu which is GMT, A-Z are the zones used.
+
+DTG integrates natively with the Time class in Ruby and is callable on all Time objects.  DTG returns a visually formatted dtg converted based on knolwedge of the zone of the object and the intended zone. It is also respective of daylight savings time of your objects zone and its intended zone.
+
+DTG is the military acronym referring to what is also called nautical or maritime time zones.  These zones are mapped across the world from A-Z not including J as J references the local timezone of yourself.
+
+## Table of Contents
+
+1. [DTG](#dtg)
+2. [Table of Contents](#table-of-contents)
+3. [Usage](#usage)
+    1. [DTG Zones](#dtg-zones)
+    2. [DTG Zone Map](#dtg-zone-map)
+4. [Installation](#installation)
+5. [Testing](#testing)
+6. [Problems](#problems)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Usage
-How to use my plugin.
+
+DTG implements the method to_dtg into the Time class and is fully compatible with all Time objects.
+
+To use:
+
+```ruby
+TIMEOBJECT.to_dtg
+```
+
+and it will return the time object as a string in the zulu timezone in dtg format.
+
+For other DTG formats:
+
+```ruby
+TIMEOBJECT.to_dtg(:zone)
+```
+
+where zone is any single letter symbol A-Z, capital or lower case and it will return the time object as a string in the zone format.
+
+### DTG Zones
+
+- A: Alpha Time: UTC +01:00 (Paris, France)
+- B: Bravo Time: UTC +02:00 (Athens, Greece)
+- C: Charlie Time: UTC +03:00 (Moscow, Russia)
+- D: Delta Time: UTC +04:00 (Kabul, Afghanistan)
+- E: Echo Time: UTC +05:00 (New Delhi, India)
+- F: Foxtrot Time: UTC +06:00 (Dhanka, Bangladesh)
+- G: Golf Time: UTC +07:00 (Bangkok, Thailand)
+- H: Hotel Time: UTC +08:00 (Beijing, China)
+- I: India Time: UTC +09:00 (Tokyo, Japan)
+- J: Juliet Time: (Local Time Zone)
+- K: Kilo Time: UTC +10:00 (Sydney, Australia)
+- L: Lima Time: UTC +11:00 (Honiara, Solomon Islands)
+- M: Mike Time: UTC +12:00 (Wellington, New Zealand)
+- N: November Time: UTC -01:00 (Azores)
+- O: Oscar Time: UTC -02:00 (Gothab, Greenland)
+- P: Papa Time: UTC -03:00 (Buenos Aires, Argentina)
+- Q: Quebec Time: UTC -04:00 (Halifax, Nova Scotia)
+- R: Romeo Time: UTC -05:00 (New York, NY United States)
+- S: Sierra Time: UTC -06:00 (Dallas, TX United States)
+- T: Tango Time: UTC -07:00 (Denver, CO United States)
+- U: Uniform Time: UTC -08:00 (Los Angeles, CA United States)
+- V: Victor Time: UTC -09:00 (Juneau, AK United States)
+- W: Whiskey Time: UTC -10:00 (Honolulu, HI United States)
+- X: X-Ray Time: UTC -11:00 (Nome, AK United States)
+- Y: Yankee Time: UTC -12:00 (Suva, Fiji)
+- Z: Zulu Time: UTC +-00:00 (Greenwich, England)
+
+### DTG Zone Map
+
+![DTG zones displayed across the map with their offsets](dtg_zones.png?raw=true "DTG Zones")
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -25,8 +96,58 @@ Or install it yourself as:
 $ gem install dtg
 ```
 
+## Testing
+
+If you would like to test this gem before adding it to your project to see it's functionality, follow these steps:
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/SolarisFlare/dtg
+```
+
+2. cd into the test/dummy directory
+
+3. Start the rails console
+
+```sh
+rails console
+```
+
+OR
+
+```sh
+rails c
+```
+
+4. Test away
+
+```ruby
+Time.zone.now
+Time.zone.now.to_dtg(:j)
+x = Time.zone.now
+x
+x.to_dtg(:j)
+x.to_dtg(:J)
+x.to_dtg
+x.to_dtg(:z)
+x.to_dtg(:Z)
+x.to_dtg(:W)
+x.to_dtg(:m)
+Time.now.to_dtg(:a)
+```
+
+## Problems
+
+DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects.
+
+> DTG is not currently compatible with DateTime and has plans to support it in future versions with native integration.
+
+
 ## Contributing
-Contribution directions go here.
+
+If you want to contribute please let me know though either an email or you can just submit a pull request to add anything!
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
