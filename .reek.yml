@@ -1,22 +1,23 @@
 detectors:
   FeatureEnvy:
     exclude:
-      - "test/dummy"
+      - "test/dummy/**/*"
   IrresponsibleModule:
     enabled: false
   ManualDispatch:
     exclude:
       - "ReadWrite#respond_to_reader?" # unavoidable due to metaprogramming
       - "ReadWrite#respond_to_writer?" # unavoidable due to metaprogramming
+      - "test/dummy/**/*"
   MissingSafeMethod:
     exclude:
-      - "test/dummy"
+      - "test/dummy/**/*"
   TooManyStatements:
     exclude:
-      - "test/dummy"
+      - "test/dummy/**/*"
   UncommunicativeVariableName:
-    exclude:
-      - "test/dummy"
+      exclude:
+      - "test/dummy/**/*"
 
 exclude_paths:
   - test/dummy

@@ -6,7 +6,7 @@ require:
 
 AllCops:
   Exclude:
-    - "test/dummy"
+    - "test/dummy/**/*"
 
 # Defer to StandardRB
 Lint:
@@ -35,7 +35,7 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Exclude:
-  - "test/dummy"
+  - "test/dummy/**/*"
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
