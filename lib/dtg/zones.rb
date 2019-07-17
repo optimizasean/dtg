@@ -1,5 +1,5 @@
-class Time
-  DTG_ZONES = {
+module Zones
+  UTC_ZONES = {
     # A: Alpha Time: UTC +01:00 (Paris, France)
     a: +1,
     # B: Bravo Time: UTC +02:00 (Athens, Greece)
@@ -53,19 +53,4 @@ class Time
     # Z: Zulu Time: UTC +-00:00 (Greenwich, England)
     z: "UTC",
   }
-
-  def to_dtg(zone = :z)
-    convert(zone).format(zone)
-  end
-
-  def format(zone = :z)
-    dtg = "%d%H%M#{zone.upcase} %b %y"
-    strftime(dtg)
-  end
-
-  def convert(zone = :z)
-    zone = zone.downcase
-    raise "Error: #{zone} is not a valid zone" unless DTG_ZONES.key?(zone)
-    zone == :j ? self : in_time_zone(DTG_ZONES[zone])
-  end
 end
