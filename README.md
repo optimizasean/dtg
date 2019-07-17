@@ -4,11 +4,11 @@
 
 # Dtg
 
-DTG is a ruby  gem to convert Time into DTG format.
+DTG is a ruby  gem to convert Time objects into DTG format.
 
 A DTG is a DateTimeGroup which is used in the military to save time.  DTG are saved in the format DDHHMML MMM YY, where D is day, H is hour, L is letter, M is month, and Y is year.  The Month is the 3 character representation such as JAN for January, MAY for May, DEC for December and so on.  Year is only the last two digits of the year e.g. 2019 is just 19.  The letter is the zone code such as W for whiskey which is HST, Z for zulu which is GMT, A-Z are the zones used.
 
-DTG integrates natively with the Time class in Ruby and is callable on all Time objects.  DTG returns a visually formatted dtg converted based on knolwedge of the zone of the object and the intended zone. It is also respective of daylight savings time of your objects zone and its intended zone.
+DTG integrates natively with the DateTime, Time, and ActiveSupport::TimeWithZone classes in Ruby/Rails and is callable on all Time objects.  DTG returns a visually formatted dtg converted based on knolwedge of the zone of the object and the intended zone. It is also respective of daylight savings time of your objects zone and its intended zone.
 
 DTG is the military acronym referring to what is also called nautical or maritime time zones.  These zones are mapped across the world from A-Z not including J as J references the local timezone of yourself.
 
@@ -27,7 +27,7 @@ DTG is the military acronym referring to what is also called nautical or maritim
 
 ## Usage
 
-DTG implements the method to_dtg into the Time class and is fully compatible with all Time objects.
+DTG implements the method to_dtg into the Time class and is fully compatible with all Time objects(DateTime, Time, and TimeWithZone have been tested, custom objects should also function the same as long as their properties emulate that of the former).
 
 To use:
 
@@ -123,10 +123,15 @@ rails c
 4. Test away
 
 ```ruby
-Time.zone.now
-Time.zone.now.to_dtg(:j)
-x = Time.zone.now
-x
+#<Tested in irb console(default rails), also works in Pry console>
+
+y = Time.zone.now
+y.dtg
+y = Time.zone.now.to_dtg(:j)
+y
+
+x = Time.now
+x.dtg
 x.to_dtg(:j)
 x.to_dtg(:J)
 x.to_dtg
@@ -134,14 +139,25 @@ x.to_dtg(:z)
 x.to_dtg(:Z)
 x.to_dtg(:W)
 x.to_dtg(:m)
+
+z = DateTime.now
+z.dtg
+z.to_dtg
+z.convert :w
+z.to_dtg :c
+
 Time.now.to_dtg(:a)
+DateTime.now.to_dtg :Q
+Time.zone.now.to_dtg L.to_sym
 ```
+
+> Note: The .dtg method will return a string naming the type of the object you called it on and can therefore be used to verify if the gem has successfully natively integrated with Ruby/Rails(should fail if not).  I included this for testing purposes to check that the right modules were being loaded with DTG and have run into no load failures but for peace of mind I left it in in case you want to see for yourself.
 
 ## Problems
 
-DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects.
+DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects.  TimeWithZone is different and therefore has is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.
 
-> DTG is not currently compatible with DateTime and has plans to support it in future versions with native integration.
+> DTG currently supports the following: DateTime, Time, ActiveSupport::TimeWithZone.  If you extend the Time class as does TimeWithZone, DTG may not function properly, to ensure it functions the same for TimeWithZone, I changed the conversion to_time, and then in_time_zone since ActiveSupport::TimeWithZone has strage behaviors I have not been able to understand yet.  Until it is updated to be more stable or I find the proper solution, this will not affect the gems functionality, but will just be a different(slightly less efficient: calling an extra method) way to work with ActiveSupport:TimeWithZone objects.
 
 
 ## Contributing
