@@ -10,15 +10,15 @@ class DateTime
   end
 
   def format(zone = :z)
-    zone = zone.downcase.to_sym
-    raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(zone)
-    dtg = "%d%H%M#{zone.upcase} %b %y"
+    key = zone.downcase.to_sym
+    raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(key)
+    dtg = "%d%H%M#{key.upcase.to_s} %b %y"
     strftime(dtg)
   end
 
   def convert(zone = :z)
-    zone = zone.downcase.to_sym
-    raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(zone)
-    zone == :j ? self : self.in_time_zone(UTC_ZONES[zone])
+    key = zone.downcase.to_sym
+    raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(key)
+    key == :j ? self.dup : self.in_time_zone(UTC_ZONES[key])
   end
 end
