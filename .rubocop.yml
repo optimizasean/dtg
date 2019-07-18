@@ -6,7 +6,7 @@ require:
 
 AllCops:
   Exclude:
-    - "test/dummy/**/*"
+    - "spec/dummy/**/*"
 
 # Defer to StandardRB
 Lint:
@@ -23,19 +23,19 @@ FrozenStringLiteralComment:
 Metrics/LineLength:
   Exclude:
   - "Gemfile"
-  - "test/dummy"
+  - "spec/dummy"
   Max: 100
 
 Metrics/BlockLength:
   Exclude:
   - "Gemfile"
   - "Guardfile"
-  - "test/dummy"
+  - "spec/dummy"
   - "spec/**/*.rb"
 
 Metrics/MethodLength:
   Exclude:
-  - "test/dummy/**/*"
+  - "spec/dummy/**/*"
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case

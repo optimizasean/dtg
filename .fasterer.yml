@@ -1,2 +1,2 @@
 exclude_paths:
-  - "test/dummy/**/*"
+  - "spec/dummy/**/*"
