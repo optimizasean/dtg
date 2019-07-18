@@ -10,13 +10,15 @@ class ActiveSupport::TimeWithZone
   end
 
   def format(zone = :z)
+    zone = zone.downcase.to_sym
+    raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(zone)
     dtg = "%d%H%M#{zone.upcase} %b %y"
     strftime(dtg)
   end
 
   def convert(zone = :z)
-    zone = zone.downcase
+    zone = zone.downcase.to_sym
     raise "Error: #{zone} is not a valid zone" unless UTC_ZONES.key?(zone)
-    zone == :j ? self : self.to_time.in_time_zone(UTC_ZONES[zone])
+    zone == :j ? self : self.in_time_zone(UTC_ZONES[zone])
   end
 end
