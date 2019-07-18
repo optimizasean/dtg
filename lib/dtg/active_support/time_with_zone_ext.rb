@@ -1,5 +1,5 @@
 require 'dtg'
-require_relative 'zones'
+require_relative '../zones'
 
 class ActiveSupport::TimeWithZone
   include Dtg

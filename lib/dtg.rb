@@ -1,8 +1,8 @@
 require "dtg/railtie"
 require "dtg/zones"
-require "dtg/core_date_time_ext"
-require "dtg/core_time_ext"
-require "dtg/core_timewithzone_ext"
+require "dtg/date_time_ext"
+require "dtg/time_ext"
+require "dtg/active_support/time_with_zone_ext"
 
 module Dtg
   def dtg
