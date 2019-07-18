@@ -19,7 +19,7 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
-      - "test/dummy/**/*"
+      - "spec/dummy/**/*"
   Fasterer:
     enabled: true
   AllRailsBestPractices:
@@ -41,13 +41,13 @@ PreCommit:
     enabled: true
     exclude:
       - "dtg.gemspec"
-      - "test/dummy"
+      - "spec/dummy"
   Standardrb:
     enabled: true
     description: "Lint Ruby files with Standard(RB)"
     include: "**/*.rb"
     exclude:
-      - "test/dummy/**/*"
+      - "spec/dummy/**/*"
 
 PostCheckout:
   IndexTags:
