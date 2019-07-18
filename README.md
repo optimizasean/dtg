@@ -2,6 +2,8 @@
 [![Gem Version](https://badge.fury.io/rb/dtg.svg)](https://badge.fury.io/rb/dtg)
 [![Build Status](https://travis-ci.org/SolarisFlare/dtg.svg?branch=master)](https://travis-ci.org/SolarisFlare/dtg)
 [![Coverage Status](https://coveralls.io/repos/github/SolarisFlare/dtg/badge.svg?branch=master)](https://coveralls.io/github/SolarisFlare/dtg?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/maintainability)](https://codeclimate.com/github/SolarisFlare/dtg/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/SolarisFlare/dtg/test_coverage)
 
 # Dtg
 
