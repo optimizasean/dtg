@@ -15,6 +15,7 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 group :development, :test do
   gem "cadre"
+  gem 'coveralls', require: false
   gem "fasterer"
   gem "guard"
   gem "guard-reek"
