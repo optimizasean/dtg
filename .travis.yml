@@ -3,7 +3,7 @@ env:
     - CC_TEST_REPORTER_ID=ABC123
 language: ruby
 rvm:
-  - 2.2.0
+  - 2.5.5
 deploy:
   provider: rubygems
   api_key:
