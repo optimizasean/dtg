@@ -1,7 +1,20 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=ABC123
 language: ruby
+rvm:
+  - 2.2.0
 deploy:
   provider: rubygems
   api_key:
     secure: lt+CEA1/wbR6g2HxcUniU6bQAC3j14dhdyzI8xYPHQ6IosZTcxmrd/WMHFUXCt0aZFCNzk1LiG4bnxXKB+YAE43vdh5sb4s6gaOInd92ax8NPHjp86M7ctTkSgZN6e2tSR78hucC3scsXU3tXtzLCNI3eUOKHIlAMe1lsuZ8r7KRLUmvAJjVt8Nx+WMPj0qli9h1nywe1SKpJZqoLmu4TgRCWXHkzmyR6MEzFtkjVJgIZCrAFE2OdV7jb97wZHIRVfN4HOY4s78M/vrvXObNdiXUYB81TJLCxyV4nYm8BbJmKMprsFek3iw5VSrpJ66uOCsIB5XpRFC9xRBli09hTNCwNdBRw3lfMG1lFixH4E1PTK0aTjwJ0bqMCBsqVL6QisX8+Hwroft7Stdob+WGBiCLdkHbjLCUBqaw8AvaPnxBPW2soYboruzLhU1gwBpqoAuJlHsbdUGVVufHFFErp1Ev92U/MggvWNTJZ/+admnRTEgoHPmRcfpPc9dZw0FpI/nE8PwKULY6dg9ngAMXedtX0W63SIOAaTE9NPcp7/BWoMtBaD28Pgh7Y70O5vAUeh2aJYj6lQKvvaLM6OEhixOjQY7Py124lo6f50iznzHT5OK4Q4zKOqA3kly4m7Elr6faSGQ8xCEvTHLp20L5hMAwRQnmMHDWbe2FrAaG9Bk=
   on:
     tags: true
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
