@@ -67,4 +67,4 @@ RSpec/MultipleExpectations:
   - "spec/features/**/*"
 
 RSpec/NestedGroups:
-  Max: 3
+  Max: 5
