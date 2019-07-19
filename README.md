@@ -8,7 +8,7 @@
 [![Downloads](https://img.shields.io/gem/dt/dtg.svg)](https://rubygems.org/gems/dtg)
 [![Download Rank](https://img.shields.io/gem/rt/dtg.svg)](https://rubygems.org/gems/dtg)
 [![Daily Download Rank](https://img.shields.io/gem/rd/dtg.svg)](https://rubygems.org/dtg)
-[![Yard Documentation](https://img.shields.io/badge/YARD%20Documentation-Auto-blue.svg)](http://rubydoc.info/github/SolarisFlare/dtg/master/frames)
+[![Yard Documentation](https://img.shields.io/badge/YARD%20Documentation-Auto-blue.svg)](https://rubydoc.info/github/SolarisFlare/dtg/)
 
 [![License](https://img.shields.io/github/license/SolarisFlare/dtg.svg)](https://raw.githubusercontent.com/SolarisFlare/dtg/master/LICENSE)
 [![GitHub version](https://badge.fury.io/gh/SolarisFlare%2Fdtg.svg)](https://badge.fury.io/gh/SolarisFlare%2Fdtg)
