@@ -170,10 +170,7 @@ Time.zone.now.to_dtg L.to_sym
 
 ## Problems
 
-DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects.  TimeWithZone is different and therefore has is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.
-
-> DTG currently supports the following: DateTime, Time, ActiveSupport::TimeWithZone.  If you extend the Time class as does TimeWithZone, DTG may not function properly, to ensure it functions the same for TimeWithZone, I changed the conversion to_time, and then in_time_zone since ActiveSupport::TimeWithZone has strage behaviors I have not been able to understand yet.  Until it is updated to be more stable or I find the proper solution, this will not affect the gems functionality, but will just be a different(slightly less efficient: calling an extra method) way to work with ActiveSupport:TimeWithZone objects.
-
+DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects otherwise it will convert all time objects from UTC +00:00 which is the rails default zone (Etc/UTC) and therefore can provide unintended results.  TimeWithZone is different and therefore is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.
 
 ## Contributing
 
