@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dtg (2.0.0)
+    dtg (3.0.0)
       rails (~> 5.2.3)
 
 GEM
