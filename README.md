@@ -13,9 +13,9 @@
 
 [![Open Github Issues](https://img.shields.io/github/issues-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
 [![Closed Github Issues](https://img.shields.io/github/issues-closed-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
-[![Star Project](https://img.shields.io/github/stars/SolarisFlare/dtg.svg?style=social)]
-[![Watch Project](https://img.shields.io/github/watchers/SolarisFlare/dtg.svg?style=social)]
-[![Follow Me](https://img.shields.io/github/followers/SolarisFlare.svg?style=social)]
+![Star Project](https://img.shields.io/github/stars/SolarisFlare/dtg.svg?style=social)
+![Watch Project](https://img.shields.io/github/watchers/SolarisFlare/dtg.svg?style=social)
+![Follow Me](https://img.shields.io/github/followers/SolarisFlare.svg?style=social)
 
 # Dtg
 
