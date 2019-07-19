@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/SolarisFlare/dtg/badge.svg?branch=master)](https://coveralls.io/github/SolarisFlare/dtg?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/maintainability)](https://codeclimate.com/github/SolarisFlare/dtg/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/SolarisFlare/dtg/test_coverage)
+[![Inline docs](http://inch-ci.org/github/SolarisFlare/dtg.svg?branch=master)](http://inch-ci.org/github/SolarisFlare/dtg)
 
 # Dtg
 

@@ -13,8 +13,8 @@ temp.*
 temp
 TEMP.*
 TEMP
-TEMP/
-temp/
+TEMP/**/*
+temp/**/*
 
 # Rails things #
 ###############
@@ -31,4 +31,5 @@ spec/dummy/tmp/
 
 # Custom #
 #########
+coverage/**/*
 
