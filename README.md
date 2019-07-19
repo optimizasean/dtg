@@ -6,6 +6,17 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/SolarisFlare/dtg/test_coverage)
 [![Inline docs](http://inch-ci.org/github/SolarisFlare/dtg.svg?branch=master)](http://inch-ci.org/github/SolarisFlare/dtg)
 
+[![License](https://img.shields.io/github/license/SolarisFlare/dtg.svg)](https://raw.githubusercontent.com/SolarisFlare/dtg/master/LICENSE)
+[![Downloads](https://img.shields.io/gem/dt/dtg.svg)](https://rubygems.org/gems/dtg)
+[![Download Rank](https://img.shields.io/gem/rt/dtg.svg)](https://rubygems.org/gems/dtg)
+[![Daily Download Rank](https://img.shields.io/gem/rd/dtg.svg)](https://rubygems.org/dtg)
+
+[![Open Github Issues](https://img.shields.io/github/issues-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
+[![Closed Github Issues](https://img.shields.io/github/issues-closed-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
+[![Star Project](https://img.shields.io/github/stars/SolarisFlare/dtg.svg?style=social)]
+[![Watch Project](https://img.shields.io/github/watchers/SolarisFlare/dtg.svg?style=social)]
+[![Follow Me](https://img.shields.io/github/followers/SolarisFlare.svg?style=social)]
+
 # Dtg
 
 DTG is a ruby  gem to convert Time objects into DTG format.
