@@ -25,7 +25,7 @@ group :development, :test do
   gem "rails_best_practices"
   gem "reek"
   gem "rspec"
-  gem "rubocop"
+  gem "rubocop", "0.65.0"
   gem "rubocop-rspec"
   gem "standard"
 end
