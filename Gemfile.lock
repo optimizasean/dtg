@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dtg (3.0.0)
+    dtg (3.0.1)
       rails (~> 5.2.3)
 
 GEM
@@ -148,6 +148,7 @@ GEM
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
+    powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -220,13 +221,15 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.2)
-    rubocop (0.72.0)
+    rubocop (0.65.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.6)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      psych (>= 3.1.0)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.7)
+      unicode-display_width (~> 1.4.0)
     rubocop-rspec (1.33.0)
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
@@ -258,7 +261,7 @@ GEM
     tins (1.21.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    unicode-display_width (1.6.0)
+    unicode-display_width (1.4.1)
     valise (1.2.1)
     virtus (1.0.5)
       axiom-types (~> 0.1)
@@ -286,7 +289,7 @@ DEPENDENCIES
   reek
   rspec
   rspec-rails
-  rubocop
+  rubocop (= 0.65.0)
   rubocop-rspec
   sqlite3
   standard
