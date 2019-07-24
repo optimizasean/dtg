@@ -42,11 +42,6 @@ Naming/VariableNumber:
 Rails:
   Enabled: true
 
-RSpec/AggregateFailures:
-  Enabled: true
-  Include:
-    - "spec/**/*.rb"
-
 RSpec/DescribeClass:
   Exclude:
   - "spec/views/**/*"
@@ -56,7 +51,7 @@ RSpec/DescribeClass:
   - "spec/config/initializers/**/*"
 
 RSpec/ExampleLength:
-  Max: 8
+  Max: 10
   Exclude:
   - "spec/features/**/*"
 
