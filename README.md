@@ -38,9 +38,10 @@ DTG is the military acronym referring to what is also called nautical or maritim
     2. [DTG Zone Map](#dtg-zone-map)
 4. [Installation](#installation)
 5. [Testing](#testing)
-6. [Problems](#problems)
-7. [Contributing](#contributing)
-8. [License](#license)
+6. [Compatability](#compatability)
+7. [Problems](#problems)
+8. [Contributing](#contributing)
+9. [License](#license)
 
 ## Usage
 
@@ -169,6 +170,10 @@ Time.zone.now.to_dtg L.to_sym
 ```
 
 > Note: The .dtg method will return a string naming the type of the object you called it on and can therefore be used to verify if the gem has successfully natively integrated with Ruby/Rails(should fail if not).  I included this for testing purposes to check that the right modules were being loaded with DTG and have run into no load failures but for peace of mind I left it in in case you want to see for yourself.
+
+## Compatability
+
+All versions of DTG are 100% compatible with all versions of rails so long as date(DateTime) time(Time) and TimeWithZone(ActiveSupport::TimeWithZone) are present otherwise the features associated with those classes will not be available.  The gem will still function without them as I have discovered through and the features associated with the missing classes will just not be there, however, attempting to use the features with one of the non-existant classes it integrates into will most likely error or cause strange behaviours so I recommend only using with the classes your application contains(i.e. do not attempt to use ActiveSupport::TimeWithZone with pure ruby unless you include it somehow in your application), luckily, all rails applications contain all 3 classes and any ruby application contains Time by default and as of lately, also contains date(I think) although the TimeWithZone will most likely not be there since it is from activesupport which is part of the rails gem.
 
 ## Problems
 
