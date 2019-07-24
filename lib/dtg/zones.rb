@@ -1,4 +1,5 @@
 module Zones
+  # UTC time zones as DTG symbols for proper conversion
   UTC_ZONES = {
     # A: Alpha Time: UTC +01:00 (Paris, France)
     a: +1,

@@ -1,3 +1,4 @@
+# Ensure all of library added to gem
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
@@ -29,11 +30,18 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
+  # File specifications
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
+  # Rails is only for testing but is the intended use for this gem
   spec.add_dependency "rails", "~> 5.2.3"
 
+  # Active support is necessary for ActiveSupport::TimeWithZone integration
+  spec.add_dependency "activesupport"
+
+  # Used by rails, not this gem
   spec.add_development_dependency "sqlite3"
 
+  # Used to test this gem in rails environment for compatability
   spec.add_development_dependency 'rspec-rails'
 end
