@@ -1,8 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Time do
-  let(:time) { described_class.now { include Dtg
-                          include Zones } }
+  let(:time) { described_class.now { include Dtg } }
 
   describe "#to_dtg" do
     context "when zone is a symbol" do
