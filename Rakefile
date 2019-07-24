@@ -16,6 +16,7 @@ end
 
 require 'bundler/gem_tasks'
 
+# RSpec rake task to run rspec on default - needed by travis
 begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)

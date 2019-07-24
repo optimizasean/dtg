@@ -11,21 +11,39 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+# Development and Test of DTG Gem dependencies
 group :development, :test do
+
   gem "cadre"
+
+  # Used for test suite reporting
   gem 'coveralls', require: false
+
+  # Find places where code can be sped up
   gem "fasterer"
+
+  # Code quality
   gem "guard"
   gem "guard-reek"
   gem "guard-rspec"
   gem "guard-rubocop"
+
+  # Check code quality extensions on git actions
   gem "overcommit"
+
+  # Community approved rails practices for better format
   gem "rails_best_practices"
+
+  # Detect code smells for bad/strage code
   gem "reek"
+
+  # RSpec for testing suite
   gem "rspec"
+
+  # Code quality enforcer
   gem "rubocop", "0.65.0"
   gem "rubocop-rspec"
+
+  # StandardRB checks for consistent ruby conventions
   gem "standard"
 end
