@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Rails is only for testing but is the intended use for this gem
-  spec.add_dependency "rails", "~> 5.2.3"
+  spec.add_dependency "rails", ">= 5.2.3"
 
   # Active support is necessary for ActiveSupport::TimeWithZone integration
   spec.add_dependency "activesupport"
