@@ -3,7 +3,7 @@ PATH
   specs:
     dtg (3.0.2)
       activesupport
-      rails (~> 5.2.3)
+      rails (>= 5.2.3)
 
 GEM
   remote: https://rubygems.org/
