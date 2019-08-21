@@ -63,6 +63,8 @@ TIMEOBJECT.to_dtg(:zone)
 
 where zone is any single letter symbol A-Z, capital or lower case and it will return the time object as a string in the zone format.
 
+*__USAGE NOTES__: Ensure that in your application or before using this gems methods(convert/to_dtg) which calls the in_time_zone method, you must set Time.zone = "yourtimezone(HST for me)".  Otherwise in_time_zone will be called and return nil:NilObject due to Time.zone returning nil(ActiveSupport thing).  Rails has a place in the application configuration to set the Time.zone before startup.*
+
 ### DTG Zones
 
 - A: Alpha Time: UTC +01:00 (Paris, France)
@@ -173,7 +175,9 @@ Time.zone.now.to_dtg L.to_sym
 
 ## Compatability
 
-All versions of DTG are 100% compatible with all versions of rails so long as date(DateTime) time(Time) and TimeWithZone(ActiveSupport::TimeWithZone) are present otherwise the features associated with those classes will not be available.  The gem will still function without them as I have discovered through and the features associated with the missing classes will just not be there, however, attempting to use the features with one of the non-existant classes it integrates into will most likely error or cause strange behaviours so I recommend only using with the classes your application contains(i.e. do not attempt to use ActiveSupport::TimeWithZone with pure ruby unless you include it somehow in your application), luckily, all rails applications contain all 3 classes and any ruby application contains Time by default and as of lately, also contains date(I think) although the TimeWithZone will most likely not be there since it is from activesupport which is part of the rails gem.
+~~All versions of DTG are 100% compatible with all versions of rails so long as date(DateTime) time(Time) and TimeWithZone(ActiveSupport::TimeWithZone) are present otherwise the features associated with those classes will not be available.  The gem will still function without them as I have discovered through and the features associated with the missing classes will just not be there, however, attempting to use the features with one of the non-existant classes it integrates into will most likely error or cause strange behaviours so I recommend only using with the classes your application contains(i.e. do not attempt to use ActiveSupport::TimeWithZone with pure ruby unless you include it somehow in your application), luckily, all rails applications contain all 3 classes and any ruby application contains Time by default and as of lately, also contains date(I think) although the TimeWithZone will most likely not be there since it is from activesupport which is part of the rails gem.~~
+
+**This Gem now includes the necessary libraries from active_support and date to work without rails.  It is 100% compatible with all versions of rails/active_support.  If you do not set Time.zone to a valid zone(many ways to do this, I recommend the 3 char code such as HST for Hawaiian Standard Time when you set your timezone to ensure proper zone coverage if your zone does daylight savings time or summer time.  DateTimeGroup#convert and DateTimeGroup#to_dtg(which calls convert) will result in nil:NilObject if Time.zone is not set before using them.  Works with irb/pry/ruby/rails and probably more that I haven't tested yet.  Enjoy!**
 
 ## Problems
 
