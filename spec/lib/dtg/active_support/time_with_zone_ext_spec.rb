@@ -1,8 +1,8 @@
-require "rails_helper"
+require "spec_helper"
 
 RSpec.describe ActiveSupport::TimeWithZone do
   # ActiveSupport::TimeWithZone preferred method of instantiation is with Time.zone.now, not new
-  let(:time) { Time.zone.now { include Dtg } }
+  let(:time) { Time.zone.now { include DateTimeGroup }}
 
   describe "#to_dtg" do
     context "when zone is a symbol" do

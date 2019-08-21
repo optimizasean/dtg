@@ -19,15 +19,8 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
-      - "spec/dummy/**/*"
   Fasterer:
     enabled: true
-  AllRailsBestPractices:
-    enabled: true
-    description: "Analyze entire project with RailsBestPractices"
-    required_executable: "rails_best_practices"
-    flags: ["--without-color", "-c", ".rails_best_practices.yml"]
-    install_command: "gem install rails_best_practices"
   RailsSchemaUpToDate:
     enabled: true
   Reek:
@@ -41,13 +34,11 @@ PreCommit:
     enabled: true
     exclude:
       - "dtg.gemspec"
-      - "spec/dummy"
   Standardrb:
     enabled: true
     description: "Lint Ruby files with Standard(RB)"
     include: "**/*.rb"
     exclude:
-      - "spec/dummy/**/*"
 
 PostCheckout:
   IndexTags:

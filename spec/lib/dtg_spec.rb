@@ -1,31 +1,18 @@
-require "rails_helper"
+require "spec_helper"
 
 RSpec.describe Dtg do
-  describe "#dtg" do
+  it "Sets the Timezone to UTC if not already set" do
+    expect(Time.zone).to eq(ActiveSupport::TimeZone.new("UTC"))
+  end
 
-    context "when the object is a DateTime" do
-      let(:dummy) { DateTime.new{ include described_class } }
+  it "does not override the timezone if set" do
+    Time.zone = "HST"
+    expect(Time.zone).to eq(ActiveSupport::TimeZone.new("HST"))
+  end
 
-      it "returns datetime in a string" do
-        expect(dummy.dtg).to eq("DTG gem is natively integrated with this class: #{dummy.class}")
-      end
-    end
-
-    context "when the object is a Time" do
-      let(:dummy) { Time.new{ include described_class } }
-
-      it "returns time in a string" do
-        expect(dummy.dtg).to eq("DTG gem is natively integrated with this class: #{dummy.class}")
-      end
-    end
-
-    context "when the object is an ActiveSupport::TimeWithZone" do
-      # ActiveSupport::TimeWithZone.new is not allowed to instantiate empty class
-      let(:dummy) { Time.zone.now { include described_class } }
-
-      it "returns the ActiveSupport::TimeWithZone in a string" do
-        expect(dummy.dtg).to eq("DTG gem is natively integrated with this class: #{dummy.class}")
-      end
+  describe ".dtg" do
+    it "replies as active if gem is loaded" do
+      expect(described_class.dtg).to eq("DTG gem is active")
     end
   end
 end

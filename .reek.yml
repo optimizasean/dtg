@@ -1,24 +1,9 @@
 detectors:
-  FeatureEnvy:
-    exclude:
-      - "spec/dummy/**/*"
   IrresponsibleModule:
     enabled: false
   ManualDispatch:
     exclude:
       - "ReadWrite#respond_to_reader?" # unavoidable due to metaprogramming
       - "ReadWrite#respond_to_writer?" # unavoidable due to metaprogramming
-      - "spec/dummy/**/*"
-  MissingSafeMethod:
-    exclude:
-      - "spec/dummy/**/*"
-  TooManyStatements:
-    exclude:
-      - "spec/dummy/**/*"
-  UncommunicativeVariableName:
-      exclude:
-      - "spec/dummy/**/*"
-
 exclude_paths:
-  - spec/dummy
   - .git-hooks

@@ -11,9 +11,8 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# Development and Test of DTG Gem dependencies
+# Used to test this gem for compatability and functionality
 group :development, :test do
-
   gem "cadre"
 
   # Used for test suite reporting
@@ -31,14 +30,15 @@ group :development, :test do
   # Check code quality extensions on git actions
   gem "overcommit"
 
-  # Community approved rails practices for better format
-  gem "rails_best_practices"
-
   # Detect code smells for bad/strage code
   gem "reek"
 
   # RSpec for testing suite
   gem "rspec"
+  gem "rspec-core"
+  gem "rspec-expectations"
+  gem "rspec-mocks"
+  gem "rspec-support"
 
   # Code quality enforcer
   gem "rubocop", "0.65.0"
