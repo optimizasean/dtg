@@ -1,6 +1,11 @@
 require "spec_helper"
 
 RSpec.describe Time do
+  # Set Time Zone before tests
+  before do
+    described_class.zone = "UTC"
+  end
+
   let(:time) { described_class.now { include DateTimeGroup } }
 
   describe "#to_dtg" do

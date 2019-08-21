@@ -1,6 +1,11 @@
 require "spec_helper"
 
 RSpec.describe ActiveSupport::TimeWithZone do
+  # Set Time Zone before tests
+  before do
+    Time.zone = "UTC"
+  end
+
   # ActiveSupport::TimeWithZone preferred method of instantiation is with Time.zone.now, not new
   let(:time) { Time.zone.now { include DateTimeGroup }}
 
