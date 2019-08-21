@@ -1,7 +1,7 @@
-require "rails_helper"
+require "spec_helper"
 
 RSpec.describe DateTime do
-  let(:time) { described_class.now { include Dtg } }
+  let(:time) { described_class.now { include DateTimeGroup } }
 
   describe "#to_dtg" do
     context "when zone is a symbol" do

@@ -5,7 +5,9 @@ require:
 
 AllCops:
   Exclude:
-    - "spec/dummy/**/*"
+    - "Gemfile"
+    - "dtg.gemspec"
+    - "Guardfile"
 
 # Defer to StandardRB
 Lint:
@@ -20,21 +22,11 @@ FrozenStringLiteralComment:
   EnforcedStyle: 'never'
 
 Metrics/LineLength:
-  Exclude:
-  - "Gemfile"
-  - "spec/dummy"
   Max: 100
 
 Metrics/BlockLength:
   Exclude:
-  - "Gemfile"
-  - "Guardfile"
-  - "spec/dummy"
   - "spec/**/*.rb"
-
-Metrics/MethodLength:
-  Exclude:
-  - "spec/dummy/**/*"
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
@@ -42,23 +34,15 @@ Naming/VariableNumber:
 Rails:
   Enabled: true
 
-RSpec/DescribeClass:
-  Exclude:
-  - "spec/views/**/*"
-  - "spec/routing/*"
-  - "spec/lib/tasks/**/*"
-  - "spec/features/**/*"
-  - "spec/config/initializers/**/*"
-
 RSpec/ExampleLength:
   Max: 10
-  Exclude:
-  - "spec/features/**/*"
 
 RSpec/MultipleExpectations:
   Max: 8
-  Exclude:
-  - "spec/features/**/*"
 
 RSpec/NestedGroups:
   Max: 5
+
+# Do not change original behavior of date/time
+Rails/TimeZone:
+  Enabled: false

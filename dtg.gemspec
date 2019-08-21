@@ -20,6 +20,14 @@ Gem::Specification.new do |spec|
                       letter is the zone code such as W for whiskey which is HST, Z for zulu which 
                       is GMT, A-Z are the zones used."
   spec.license     = "MIT"
+  spec.required_rubygems_version = Gem::Requirement.new(">= 0") if spec.respond_to? \
+                                                                  :required_rubygems_version=
+  spec.files = Dir["Gemfile", "dtg.gemspec", "Rakefile", "lib/**/*"]
+  spec.test_files = Dir["spec/**/*"]
+  spec.rubygems_version = %q{1.6.2}
+
+  # Active support is necessary for ActiveSupport::TimeWithZone integration
+  spec.add_dependency "activesupport"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -30,18 +38,10 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  # File specifications
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  if spec.respond_to? :specification_version then
+    spec.specification_version = 3
 
-  # Rails is only for testing but is the intended use for this gem
-  spec.add_dependency "rails", ">= 5.2.3"
-
-  # Active support is necessary for ActiveSupport::TimeWithZone integration
-  spec.add_dependency "activesupport"
-
-  # Used by rails, not this gem
-  spec.add_development_dependency "sqlite3"
-
-  # Used to test this gem in rails environment for compatability
-  spec.add_development_dependency 'rspec-rails'
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    end
+  end
 end
