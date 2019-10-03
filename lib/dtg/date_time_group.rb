@@ -52,15 +52,17 @@ module DateTimeGroup
       year += year_temp - year_temp % 100
     end
     zone = UTC_ZONES[dtg_hash[:zone].downcase.to_sym].to_s
+    puts zone
     if zone.blank?
-      zone = 0
+      zone = '+00:00'
     elsif zone == 'UTC'
-      zone = '00:00'
+      zone = '+00:00'
     elsif zone.size == 2
       zone = zone[0] + '0' + zone[1] + ':00'
     else
       zone += ':00'
     end
+    puts zone
     Time.new(
       year,
       dtg_hash[:month],
@@ -70,5 +72,10 @@ module DateTimeGroup
       0,
       zone
     )
+  end
+
+  def change_dtg(dtg, zone = :w)
+    old = from_dtg(dtg)
+    old.to_dtg(zone)
   end
 end
