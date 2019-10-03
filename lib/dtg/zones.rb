@@ -1,32 +1,32 @@
 module Zones
   # UTC time zones as DTG symbols for proper conversion
   UTC_ZONES = {
-    a: +1,
-    b: +2,
-    c: +3,
-    d: +4,
-    e: +5,
-    f: +6,
-    g: +7,
-    h: +8,
-    i: +9,
     # A: Alpha Time: UTC +01:00 (Paris, France)
+    a: +1,
     # B: Bravo Time: UTC +02:00 (Athens, Greece)
+    b: +2,
     # C: Charlie Time: UTC +03:00 (Moscow, Russia)
+    c: +3,
     # D: Delta Time: UTC +04:00 (Kabul, Afghanistan)
+    d: +4,
     # E: Echo Time: UTC +05:00 (New Delhi, India)
+    e: +5,
     # F: Foxtrot Time: UTC +06:00 (Dhanka, Bangladesh)
+    f: +6,
     # G: Golf Time: UTC +07:00 (Bangkok, Thailand)
+    g: +7,
     # H: Hotel Time: UTC +08:00 (Beijing, China)
+    h: +8,
     # I: India Time: UTC +09:00 (Tokyo, Japan)
+    i: +9,
     # J: Juliet Time: (Local Time Zone)
     j: '',
-    k: +10,
-    l: +11,
-    m: +12,
     # K: Kilo Time: UTC +10:00 (Sydney, Australia)
+    k: +10,
     # L: Lima Time: UTC +11:00 (Honiara, Solomon Islands)
+    l: +11,
     # M: Mike Time: UTC +12:00 (Wellington, New Zealand)
+    m: +12,
     # N: November Time: UTC -01:00 (Azores)
     n: -1,
     # O: Oscar Time: UTC -02:00 (Gothab, Greenland)

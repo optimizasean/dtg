@@ -1,5 +1,6 @@
 module Format
   FORMAT = {
+    # Size of DTG
     size: 14,
     size_day: 2,
     size_hour: 2,
@@ -18,7 +19,7 @@ module Format
     minute_range: 4..5,
     zone_start: 6,
     zone_end: 6,
-    zone_range: 6,
+    zone_range: 6..6,
     month_start: 8,
     month_end: 10,
     month_range: 8..10,
@@ -28,5 +29,6 @@ module Format
   }
 end
 
+# DTG Structure
 # 01234567890123
 # DDHHMML MMM YY
