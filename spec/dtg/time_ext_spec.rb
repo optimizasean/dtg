@@ -1,5 +1,3 @@
-require "spec_helper"
-
 RSpec.describe Time do
   # Set Time Zone before tests
   before do
