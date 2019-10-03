@@ -25,4 +25,7 @@ group :development, :test do
 
   # Prettier for better looking code
   gem "prettier"
+
+  # Rake to run tasks
+  gem "rake"
 end
