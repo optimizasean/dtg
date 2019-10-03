@@ -1,9 +1,0 @@
-detectors:
-  IrresponsibleModule:
-    enabled: false
-  ManualDispatch:
-    exclude:
-      - "ReadWrite#respond_to_reader?" # unavoidable due to metaprogramming
-      - "ReadWrite#respond_to_writer?" # unavoidable due to metaprogramming
-exclude_paths:
-  - .git-hooks

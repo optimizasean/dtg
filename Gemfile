@@ -13,25 +13,8 @@ gemspec
 
 # Used to test this gem for compatability and functionality
 group :development, :test do
-  gem "cadre"
-
   # Used for test suite reporting
   gem 'coveralls', require: false
-
-  # Find places where code can be sped up
-  gem "fasterer"
-
-  # Code quality
-  gem "guard"
-  gem "guard-reek"
-  gem "guard-rspec"
-  gem "guard-rubocop"
-
-  # Check code quality extensions on git actions
-  gem "overcommit"
-
-  # Detect code smells for bad/strage code
-  gem "reek"
 
   # RSpec for testing suite
   gem "rspec"
@@ -39,11 +22,4 @@ group :development, :test do
   gem "rspec-expectations"
   gem "rspec-mocks"
   gem "rspec-support"
-
-  # Code quality enforcer
-  gem "rubocop", "0.65.0"
-  gem "rubocop-rspec"
-
-  # StandardRB checks for consistent ruby conventions
-  gem "standard"
 end
