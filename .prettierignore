@@ -1,0 +1,32 @@
+# Git files #
+#############
+.git/**/*
+.gitignore
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+LICENSE
+README.md
+dtg_zones.png
+
+# Configuration Files #
+#######################
+.coveralls.yml
+.inch.yml
+.prettierignore
+.rspec
+.rspec_status
+.ruby-version
+.travis.yml
+
+# Ruby Files #
+##############
+Gemfile
+Gemfile.lock
+bin/**/*
+*.gem
+
+# Save the comments #
+#####################
+lib/dtg/zones.rb
+lib/dtg/format.rb
+

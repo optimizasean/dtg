@@ -11,7 +11,7 @@ module DateTimeGroup
     convert(zone).format(zone)
   end
 
-  # DTG Test to determine if was injected properly into class
+  # DTG Test to determine if was injected properly into class for native use
   def dtg
     "DTG gem is natively integrated with this class: #{self.class}"
   end
@@ -31,7 +31,8 @@ module DateTimeGroup
     key == :j ? self.dup : self.in_time_zone(UTC_ZONES[key])
   end
 
-  def parse_dtg(dtg)
+  # Parse will strip the DTG into its different fields
+  def self.parse(dtg)
     {
       day: dtg[FORMAT[:day_range]],
       hour: dtg[FORMAT[:hour_range]],
@@ -42,8 +43,9 @@ module DateTimeGroup
     }
   end
 
-  def from_dtg(dtg)
-    dtg_hash = parse_dtg(dtg)
+  # From will convert from DTG to a Time (not enough data to recreate AS or DateTime)
+  def self.from_dtg(dtg)
+    dtg_hash = parse(dtg)
     year = dtg_hash[:year].to_i
     if (Time.now.year % 100) < year
       year = Time.now.year
@@ -52,7 +54,6 @@ module DateTimeGroup
       year += year_temp - year_temp % 100
     end
     zone = UTC_ZONES[dtg_hash[:zone].downcase.to_sym].to_s
-    puts zone
     if zone.blank?
       zone = '+00:00'
     elsif zone == 'UTC'
@@ -62,7 +63,7 @@ module DateTimeGroup
     else
       zone += ':00'
     end
-    puts zone
+    # Year, month, Day, Hour, Minute, Second, Offset
     Time.new(
       year,
       dtg_hash[:month],
@@ -74,7 +75,8 @@ module DateTimeGroup
     )
   end
 
-  def change_dtg(dtg, zone = :w)
+  # Change will convert a DTG into a different zone with respect to its zone code
+  def self.convert(dtg, zone = :w)
     old = from_dtg(dtg)
     old.to_dtg(zone)
   end
