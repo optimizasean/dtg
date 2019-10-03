@@ -176,13 +176,15 @@ x.to_dtg
 x.to_dtg(:z)
 x.to_dtg(:Z)
 x.to_dtg(:W)
-x.to_dtg(:m)
+DateTimeGroup.from_dtg(x.to_dtg(:m))
 
 z = DateTime.now
 z.dtg
-z.to_dtg
+DateTimeGroup.convert(z.to_dtg, :w)
+z.to_dtg :w
 z.convert :w
 z.to_dtg :c
+DateTimeGroup.parse z
 
 Time.now.to_dtg(:a)
 DateTime.now.to_dtg :Q
@@ -199,7 +201,7 @@ Time.zone.now.to_dtg L.to_sym
 
 ## Problems
 
-DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects otherwise it will convert all time objects from UTC +00:00 which is the rails default zone (Etc/UTC) and therefore can provide unintended results.  TimeWithZone is different and therefore is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.
+DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects otherwise it will convert all time objects from UTC +00:00 which is the rails default zone (Etc/UTC) and therefore can provide unintended results.  TimeWithZone is different and therefore is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.  You also cannot truly convert from J (Juliet or local time) to any other dtg zone.  This is because DTG store their zone as an offset letter code, whereas the code J is the local time (but what is local?) and the only way to know the local time would be to take it from the time of the machine doing the conversion!  However, what if I emailed you something in J, there would be no way to tell what its time code actually is because you could insert it into a database and would then not know what "local" is for it.  Luckily, people only use J rarely or in small circumstances.  Almost everything sent is first changed to Z and everyone knows what their local time is in Z and convert it for internal documents.  If you read old historical documents that use the dtg zone codes, you can see this.  I included a parse method so you can imlpement your own parsers/formatters from a dtg in case you run into J codes (hopefully never).
 
 ## Development
 
