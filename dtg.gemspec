@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
 
   # Active support is necessary for ActiveSupport::TimeWithZone integration
-  spec.add_dependency 'activesupport', '~> 0'
+  spec.add_dependency 'activesupport'
 
   # Bundler to manage gems ad versions
   spec.add_development_dependency 'bundler', '~> 1.17'
