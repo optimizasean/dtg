@@ -22,4 +22,7 @@ group :development, :test do
   gem "rspec-expectations"
   gem "rspec-mocks"
   gem "rspec-support"
+
+  # Prettier for better looking code
+  gem "prettier"
 end

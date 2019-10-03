@@ -1,5 +1,5 @@
-require_relative "zones"
-require_relative "format"
+require_relative 'zones'
+require_relative 'format'
 
 module DateTimeGroup
   # Zones module has timezones (UTC_Zones) as dtg listings
@@ -41,7 +41,7 @@ module DateTimeGroup
       year: dtg[FORMAT[:year_range]]
     }
   end
-  
+
   def from_dtg(dtg)
     dtg_hash = parse_dtg(dtg)
     year = dtg_hash[:year].to_i
@@ -54,13 +54,21 @@ module DateTimeGroup
     zone = UTC_ZONES[dtg_hash[:zone].downcase.to_sym].to_s
     if zone.blank?
       zone = 0
-    elsif zone == "UTC"
-      zone = "00:00"
+    elsif zone == 'UTC'
+      zone = '00:00'
     elsif zone.size == 2
-      zone = zone[0] + "0" + zone[1] + ":00"
+      zone = zone[0] + '0' + zone[1] + ':00'
     else
-      zone += ":00"
+      zone += ':00'
     end
-    Time.new(year, dtg_hash[:month], dtg_hash[:day].to_i, dtg_hash[:hour].to_i, dtg_hash[:minute].to_i, 0, zone)
+    Time.new(
+      year,
+      dtg_hash[:month],
+      dtg_hash[:day].to_i,
+      dtg_hash[:hour].to_i,
+      dtg_hash[:minute].to_i,
+      0,
+      zone
+    )
   end
 end

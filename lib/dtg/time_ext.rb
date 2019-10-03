@@ -1,5 +1,5 @@
-require_relative "date_time_group"
-require "active_support/core_ext/time"
+require_relative 'date_time_group'
+require 'active_support/core_ext/time'
 
 class Time
   # Insert DTG Methods into this class

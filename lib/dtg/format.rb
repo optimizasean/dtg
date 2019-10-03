@@ -24,7 +24,7 @@ module Format
     month_range: 8..10,
     year_start: 12,
     year_end: 13,
-    year_range: 12..13,
+    year_range: 12..13
   }
 end
 
