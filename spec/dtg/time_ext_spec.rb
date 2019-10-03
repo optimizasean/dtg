@@ -1,20 +1,19 @@
 RSpec.describe Time do
   # Set Time Zone before tests
-  before do
-    described_class.zone = "UTC"
-  end
+  before { described_class.zone = 'UTC' }
 
   let(:time) { described_class.now { include DateTimeGroup } }
 
-  describe "#to_dtg" do
-    context "when zone is a symbol" do
-      context "when symbol is lowercase" do
-        it "converts and formats as dtg" do
+  describe '#to_dtg' do
+    context 'when zone is a symbol' do
+      context 'when symbol is lowercase' do
+        it 'converts and formats as dtg' do
           (:a..:z).to_set.delete(:j).each do |zone|
-            expect(time.to_dtg(zone)).to eq(time.in_time_zone(
-                                                  Zones::UTC_ZONES[zone])
-                                                  .strftime(
-                                                    "%d%H%M#{zone.upcase.to_s} %b %y"))
+            expect(time.to_dtg(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone]).strftime(
+                "%d%H%M#{zone.upcase.to_s} %b %y"
+              )
+            )
           end
           # :j is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -22,13 +21,14 @@ RSpec.describe Time do
         end
       end
 
-      context "when symbol is uppercase" do
-        it "converts and formats as dtg" do
+      context 'when symbol is uppercase' do
+        it 'converts and formats as dtg' do
           (:A..:Z).to_set.delete(:J).each do |zone|
-            expect(time.to_dtg(zone)).to eq(time.in_time_zone(
-                                                  Zones::UTC_ZONES[zone.downcase])
-                                                  .strftime(
-                                                    "%d%H%M#{zone.to_s} %b %y"))
+            expect(time.to_dtg(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.downcase]).strftime(
+                "%d%H%M#{zone.to_s} %b %y"
+              )
+            )
           end
           # :J is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -37,14 +37,15 @@ RSpec.describe Time do
       end
     end
 
-    context "when zone is a single character string" do
-      context "when string is lowercase" do
-        it "converts and formats as dtg" do
+    context 'when zone is a single character string' do
+      context 'when string is lowercase' do
+        it 'converts and formats as dtg' do
           ('a'..'z').to_set.delete('j').each do |zone|
-            expect(time.to_dtg(zone)).to eq(time.in_time_zone(
-                                                  Zones::UTC_ZONES[zone.to_sym])
-                                                  .strftime(
-                                                    "%d%H%M#{zone.upcase} %b %y"))
+            expect(time.to_dtg(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.to_sym]).strftime(
+                "%d%H%M#{zone.upcase} %b %y"
+              )
+            )
           end
           # 'j' is separate because there is no local timezone identifier
           # it just gets returned and formatted
@@ -52,13 +53,13 @@ RSpec.describe Time do
         end
       end
 
-      context "when string is uppercase" do
-        it "converts and formats as dtg" do
+      context 'when string is uppercase' do
+        it 'converts and formats as dtg' do
           ('A'..'Z').to_set.delete('J').each do |zone|
-            expect(time.to_dtg(zone)).to eq(time.in_time_zone(
-                                                  Zones::UTC_ZONES[zone.downcase.to_sym])
-                                                  .strftime(
-                                                    "%d%H%M#{zone} %b %y"))
+            expect(time.to_dtg(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.downcase.to_sym])
+                .strftime("%d%H%M#{zone} %b %y")
+            )
           end
           # 'J' is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -68,55 +69,60 @@ RSpec.describe Time do
     end
   end
 
-  describe "#format" do
-    context "when zone is a symbol" do
-      context "when symbol is lowercase" do
-        it "formats to dtg standard" do
+  describe '#format' do
+    context 'when zone is a symbol' do
+      context 'when symbol is lowercase' do
+        it 'formats to dtg standard' do
           (:a..:z).each do |zone|
-            expect(time.format(zone)).to eq(time.strftime(
-                                                  "%d%H%M#{zone.upcase.to_s} %b %y"))
+            expect(time.format(zone)).to eq(
+              time.strftime("%d%H%M#{zone.upcase.to_s} %b %y")
+            )
           end
         end
       end
 
-      context "when symbol is uppercase" do
-        it "formats to dtg standard" do
+      context 'when symbol is uppercase' do
+        it 'formats to dtg standard' do
           (:A..:Z).each do |zone|
-            expect(time.format(zone)).to eq(time.strftime(
-                                                  "%d%H%M#{zone.to_s} %b %y"))
+            expect(time.format(zone)).to eq(
+              time.strftime("%d%H%M#{zone.to_s} %b %y")
+            )
           end
         end
       end
     end
 
-    context "when zone is a single character string" do
-      context "when string is lowercase" do
-        it "formats to dtg standard" do
+    context 'when zone is a single character string' do
+      context 'when string is lowercase' do
+        it 'formats to dtg standard' do
           ('a'..'z').each do |zone|
-            expect(time.format(zone)).to eq(time.strftime(
-                                                  "%d%H%M#{zone.upcase} %b %y"))
+            expect(time.format(zone)).to eq(
+              time.strftime("%d%H%M#{zone.upcase} %b %y")
+            )
           end
         end
       end
 
-      context "when string is uppercase" do
-        it "formats to dtg standard" do
+      context 'when string is uppercase' do
+        it 'formats to dtg standard' do
           ('A'..'Z').each do |zone|
-            expect(time.format(zone)).to eq(time.strftime(
-                                                  "%d%H%M#{zone} %b %y"))
+            expect(time.format(zone)).to eq(
+              time.strftime("%d%H%M#{zone} %b %y")
+            )
           end
         end
       end
     end
   end
 
-  describe "#convert" do
-    context "when zone is a symbol" do
-      context "when symbol is lowercase" do
-        it "returns converted time to new zone" do
+  describe '#convert' do
+    context 'when zone is a symbol' do
+      context 'when symbol is lowercase' do
+        it 'returns converted time to new zone' do
           (:a..:z).to_set.delete(:j).each do |zone|
-            expect(time.convert(zone)).to eq(time.in_time_zone(
-                                                   Zones::UTC_ZONES[zone]))
+            expect(time.convert(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone])
+            )
           end
           # :j is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -124,11 +130,12 @@ RSpec.describe Time do
         end
       end
 
-      context "when symbol is uppercase" do
-        it "returns converted time to new zone" do
+      context 'when symbol is uppercase' do
+        it 'returns converted time to new zone' do
           (:A..:Z).to_set.delete(:J).each do |zone|
-            expect(time.convert(zone)).to eq(time.in_time_zone(
-                                                   Zones::UTC_ZONES[zone.downcase]))
+            expect(time.convert(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.downcase])
+            )
           end
           # :J is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -137,12 +144,13 @@ RSpec.describe Time do
       end
     end
 
-    context "when zone is a single character string" do
-      context "when string is lowercase" do
-        it "returns converted time to new zone" do
+    context 'when zone is a single character string' do
+      context 'when string is lowercase' do
+        it 'returns converted time to new zone' do
           ('a'..'z').to_set.delete('j').each do |zone|
-            expect(time.convert(zone)).to eq(time.in_time_zone(
-                                                   Zones::UTC_ZONES[zone.to_sym]))
+            expect(time.convert(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.to_sym])
+            )
           end
           # 'j' is separate because there is no local timezone identifier,
           # it just gets returned and formatted
@@ -150,11 +158,12 @@ RSpec.describe Time do
         end
       end
 
-      context "when string is uppercase" do
-        it "returns converted time to new zone" do
+      context 'when string is uppercase' do
+        it 'returns converted time to new zone' do
           ('A'..'Z').to_set.delete('J').each do |zone|
-            expect(time.convert(zone)).to eq(time.in_time_zone(
-                                                   Zones::UTC_ZONES[zone.downcase.to_sym]))
+            expect(time.convert(zone)).to eq(
+              time.in_time_zone(Zones::UTC_ZONES[zone.downcase.to_sym])
+            )
           end
           # 'J' is separate because there is no local timezone identifier,
           # it just gets returned and formatted
