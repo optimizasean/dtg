@@ -1,4 +1,13 @@
-# Git files #
+# System Files #
+################
+.DS_Store
+.icloud
+Desktop.ini
+.git
+.vscode
+*.code-workspace
+
+# Git Files #
 #############
 .git/**/*
 .gitignore
@@ -23,10 +32,18 @@ dtg_zones.png
 Gemfile
 Gemfile.lock
 bin/**/*
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
 *.gem
 
-# Save the comments #
-#####################
+# Save my poor comments #
+#########################
 lib/dtg/zones.rb
 lib/dtg/format.rb
 
