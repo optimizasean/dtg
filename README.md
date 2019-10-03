@@ -108,12 +108,14 @@ gem 'dtg'
 
 And then execute:
 ```bash
-$ bundle
+bundle install
 ```
 
 Or install it yourself as:
 ```bash
-$ gem install dtg
+cd dtg
+gem build dtg
+gem install dtg
 ```
 
 ## Testing
@@ -126,24 +128,40 @@ If you would like to test this gem before adding it to your project to see it's 
 git clone https://github.com/SolarisFlare/dtg
 ```
 
-2. cd into the test/dummy directory
+2. cd into the project
 
-3. Start the rails console
+3. Build the gem
 
 ```sh
-rails console
+gem build dtg
+```
+
+4. Install the gem
+
+```sh
+gem install dtg
+```
+
+5. Start the ruby console
+
+```sh
+irb
 ```
 
 OR
 
-```sh
-rails c
-```
+the ruby running console of your choice (pry, rails console / rails c, ...)
 
-4. Test away
+6. Require it to load it into the console (only necessary for irb, others like rails should usually load automatically but it doesn't hurt if it doesn't work!)
 
 ```ruby
-#<Tested in irb console(default rails), also works in Pry console>
+require 'dtg'
+```
+
+7. Test away
+
+```ruby
+#<Tested in irb console and rails console, also works in Pry console>
 
 y = Time.zone.now
 y.dtg
@@ -183,37 +201,6 @@ Time.zone.now.to_dtg L.to_sym
 
 DTG relies upon time objects that have timezone set either as Time.zone or as the default offset recorded.  I recommend setting the application timezone in the application.rb configuration file so that dtg works automatically on any generated time objects otherwise it will convert all time objects from UTC +00:00 which is the rails default zone (Etc/UTC) and therefore can provide unintended results.  TimeWithZone is different and therefore is a Time with offset and with zone.  Therefore without data loss, you can convert from TimeWithZone to DateTime or Time and maintain the same time, however, you may lose the zone code but the offset will be kept and the zone code can be recovered based on this offset but certain zones that follow daylight savings time may lose their savings-ness and will no longer spring forward or backward if converted.
 
-## Contributing
-
-If you want to contribute please let me know though either an email or you can just submit a pull request to add anything!
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-
-
-_________________________________ADD TO GEMFILE
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'dtg'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install dtg
-
-## Usage
-
-TODO: Write usage instructions here
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -224,10 +211,13 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dtg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+If you want to contribute please let me know though either an email or you can just submit a pull request to add anything or open an issue and I can look through it with you!
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Code of Conduct
 
-Everyone interacting in the Dtg project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/dtg/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Dtg project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/SolarisFlare/dtg/blob/master/CODE_OF_CONDUCT.md).
+
