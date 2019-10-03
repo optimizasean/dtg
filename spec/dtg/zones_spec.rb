@@ -1,5 +1,3 @@
-require "spec_helper"
-
 RSpec.describe Zones do
   describe "UTC_ZONES" do
     it "returns alpha time offset" do
