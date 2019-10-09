@@ -40,8 +40,11 @@ DTG is the military acronym referring to what is also called nautical or maritim
 5. [Testing](#testing)
 6. [Compatability](#compatability)
 7. [Problems](#problems)
-8. [Contributing](#contributing)
-9. [License](#license)
+8. [Development](#development)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Code of Conduct](#code-of-conduct)
+12. [Links and Files](#links-and-files)
 
 ## Usage
 
@@ -211,7 +214,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dtg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/SolarisFlare/dtg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 If you want to contribute please let me know though either an email or you can just submit a pull request to add anything or open an issue and I can look through it with you!
 
@@ -223,3 +226,27 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 Everyone interacting in the Dtg project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/SolarisFlare/dtg/blob/master/CODE_OF_CONDUCT.md).
 
+## Links and Files
+
+- [RubyGems](https://rubygems.org/dtg)
+- [Code](https://github.com/SolarisFlare/dtg)
+- [Wiki](https://github.com/SolarisFlare/dtg/wiki)
+- [Projects](https://github.com/SolarisFlare/dtg/projects)
+- [Issues](https://github.com/SolarisFlare/dtg/issues)
+- [Readme](https://github.com/SolarisFlare/dtg/blob/master/README.md)
+- [Changelog](https://github.com/SolarisFlare/dtg/blob/master/CHANGELOG.md)
+- [License](https://github.com/SolarisFlare/dtg/blob/master/LICENSE)
+- [Code of Conduct](https://github.com/SolarisFlare/dtg/blob/master/CODE_OF_CONDUCT.md)
+- [Contributor Covenant](http://contributor-covenant.org)
+- [Pull Requests](https://github.com/SolarisFlare/dtg/pulls)
+- Security
+  - [Advisories](https://github.com/SolarisFlare/dtg/security/advisories)
+  - [Policy](https://github.com/SolarisFlare/dtg/security/policy)
+- Insights
+  - [Pulse](https://github.com/SolarisFlare/dtg/pulse)
+  - [Contributors](https://github.com/SolarisFlare/dtg/graphs/contributors)
+  - [Commits](https://github.com/SolarisFlare/dtg/graphs/commit-activity)
+  - [Code Frequency](https://github.com/SolarisFlare/dtg/graphs/code-frequency)
+  - [Dependency Graph](https://github.com/SolarisFlare/dtg/network/dependencies)
+  - [Network](https://github.com/SolarisFlare/dtg/network)
+  - [Forks](https://github.com/SolarisFlare/dtg/network/members)
