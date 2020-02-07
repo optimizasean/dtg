@@ -8,9 +8,9 @@ require 'dtg/version'
 Gem::Specification.new do |spec|
   spec.name = 'dtg'
   spec.version = Dtg::VERSION
-  spec.authors = %w[SolarisFlare]
-  spec.email = %w[shadowbomb20@gmail.com]
-  spec.homepage = 'https://github.com/SolarisFlare/dtg/README.md'
+  spec.authors = %w[optimizasean]
+  spec.email = %w[seanmaika@hotmail.com]
+  spec.homepage = 'https://github.com/optimizasean/dtg/README.md'
   spec.summary = 'DTG converts from a DateTime to a DTG'
   spec.description =
     'A DTG is a DateTimeGroup which is used in the military to save time.  DTG 
@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = 'NOSERVER'
     spec.metadata['homepage_uri'] = spec.homepage
-    spec.metadata['source_code_uri'] = 'https://github.com/SolarisFlare/dtg'
+    spec.metadata['source_code_uri'] = 'https://github.com/optimizasean/dtg'
     spec.metadata['changelog_uri'] =
-      'https://github.com/SolarisFlare/dtg/CHANGELOG.md'
+      'https://github.com/optimizasean/dtg/CHANGELOG.md'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
             'public gem pushes.'
