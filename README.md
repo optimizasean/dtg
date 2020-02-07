@@ -1,23 +1,23 @@
-[![Build Status](https://travis-ci.org/SolarisFlare/dtg.svg?branch=master)](https://travis-ci.org/SolarisFlare/dtg)
-[![Coverage Status](https://coveralls.io/repos/github/SolarisFlare/dtg/badge.svg?branch=master)](https://coveralls.io/github/SolarisFlare/dtg?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/maintainability)](https://codeclimate.com/github/SolarisFlare/dtg/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/SolarisFlare/dtg/test_coverage)
-[![Inline docs](http://inch-ci.org/github/SolarisFlare/dtg.svg?branch=master)](http://inch-ci.org/github/SolarisFlare/dtg)
+[![Build Status](https://travis-ci.org/optimizasean/dtg.svg?branch=master)](https://travis-ci.org/optimizasean/dtg)
+[![Coverage Status](https://coveralls.io/repos/github/optimizasean/dtg/badge.svg?branch=master)](https://coveralls.io/github/optimizasean/dtg?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/maintainability)](https://codeclimate.com/github/optimizasean/dtg/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/optimizasean/dtg/test_coverage)
+[![Inline docs](http://inch-ci.org/github/optimizasean/dtg.svg?branch=master)](http://inch-ci.org/github/optimizasean/dtg)
 
 [![Gem Version](https://badge.fury.io/rb/dtg.svg)](https://badge.fury.io/rb/dtg)
 [![Downloads](https://img.shields.io/gem/dt/dtg.svg)](https://rubygems.org/gems/dtg)
 [![Download Rank](https://img.shields.io/gem/rt/dtg.svg)](https://rubygems.org/gems/dtg)
 [![Daily Download Rank](https://img.shields.io/gem/rd/dtg.svg)](https://rubygems.org/dtg)
-[![Yard Documentation](https://img.shields.io/badge/YARD%20Documentation-Auto-blue.svg)](https://rubydoc.info/github/SolarisFlare/dtg/)
+[![Yard Documentation](https://img.shields.io/badge/YARD%20Documentation-Auto-blue.svg)](https://rubydoc.info/github/optimizasean/dtg/)
 
-[![License](https://img.shields.io/github/license/SolarisFlare/dtg.svg)](https://raw.githubusercontent.com/SolarisFlare/dtg/master/LICENSE)
-[![GitHub version](https://badge.fury.io/gh/SolarisFlare%2Fdtg.svg)](https://badge.fury.io/gh/SolarisFlare%2Fdtg)
-[![Open Github Issues](https://img.shields.io/github/issues-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
-[![Closed Github Issues](https://img.shields.io/github/issues-closed-raw/SolarisFlare/dtg.svg)](https://github.com/SolarisFlare/dtg/issues)
+[![License](https://img.shields.io/github/license/optimizasean/dtg.svg)](https://raw.githubusercontent.com/optimizasean/dtg/master/LICENSE)
+[![GitHub version](https://badge.fury.io/gh/optimizasean%2Fdtg.svg)](https://badge.fury.io/gh/optimizasean%2Fdtg)
+[![Open Github Issues](https://img.shields.io/github/issues-raw/optimizasean/dtg.svg)](https://github.com/optimizasean/dtg/issues)
+[![Closed Github Issues](https://img.shields.io/github/issues-closed-raw/optimizasean/dtg.svg)](https://github.com/optimizasean/dtg/issues)
 
-![Star Project](https://img.shields.io/github/stars/SolarisFlare/dtg.svg?style=social)
-![Watch Project](https://img.shields.io/github/watchers/SolarisFlare/dtg.svg?style=social)
-![Follow Me](https://img.shields.io/github/followers/SolarisFlare.svg?style=social)
+![Star Project](https://img.shields.io/github/stars/optimizasean/dtg.svg?style=social)
+![Watch Project](https://img.shields.io/github/watchers/optimizasean/dtg.svg?style=social)
+![Follow Me](https://img.shields.io/github/followers/optimizasean.svg?style=social)
 
 # Dtg
 
@@ -128,7 +128,7 @@ If you would like to test this gem before adding it to your project to see it's 
 1. Clone the repository
 
 ```sh
-git clone https://github.com/SolarisFlare/dtg
+git clone https://github.com/optimizasean/dtg
 ```
 
 2. cd into the project
@@ -229,24 +229,24 @@ Everyone interacting in the Dtg project’s codebases, issue trackers, chat room
 ## Links and Files
 
 - [RubyGems](https://rubygems.org/dtg)
-- [Code](https://github.com/SolarisFlare/dtg)
-- [Wiki](https://github.com/SolarisFlare/dtg/wiki)
-- [Projects](https://github.com/SolarisFlare/dtg/projects)
-- [Issues](https://github.com/SolarisFlare/dtg/issues)
-- [Readme](https://github.com/SolarisFlare/dtg/blob/master/README.md)
-- [Changelog](https://github.com/SolarisFlare/dtg/blob/master/CHANGELOG.md)
-- [License](https://github.com/SolarisFlare/dtg/blob/master/LICENSE)
-- [Code of Conduct](https://github.com/SolarisFlare/dtg/blob/master/CODE_OF_CONDUCT.md)
+- [Code](https://github.com/optimizasean/dtg)
+- [Wiki](https://github.com/optimizasean/dtg/wiki)
+- [Projects](https://github.com/optimizasean/dtg/projects)
+- [Issues](https://github.com/optimizasean/dtg/issues)
+- [Readme](https://github.com/optimizasean/dtg/blob/master/README.md)
+- [Changelog](https://github.com/optimizasean/dtg/blob/master/CHANGELOG.md)
+- [License](https://github.com/optimizasean/dtg/blob/master/LICENSE)
+- [Code of Conduct](https://github.com/optimizasean/dtg/blob/master/CODE_OF_CONDUCT.md)
 - [Contributor Covenant](http://contributor-covenant.org)
-- [Pull Requests](https://github.com/SolarisFlare/dtg/pulls)
+- [Pull Requests](https://github.com/optimizasean/dtg/pulls)
 - Security
-  - [Advisories](https://github.com/SolarisFlare/dtg/security/advisories)
-  - [Policy](https://github.com/SolarisFlare/dtg/security/policy)
+  - [Advisories](https://github.com/optimizasean/dtg/security/advisories)
+  - [Policy](https://github.com/optimizasean/dtg/security/policy)
 - Insights
-  - [Pulse](https://github.com/SolarisFlare/dtg/pulse)
-  - [Contributors](https://github.com/SolarisFlare/dtg/graphs/contributors)
-  - [Commits](https://github.com/SolarisFlare/dtg/graphs/commit-activity)
-  - [Code Frequency](https://github.com/SolarisFlare/dtg/graphs/code-frequency)
-  - [Dependency Graph](https://github.com/SolarisFlare/dtg/network/dependencies)
-  - [Network](https://github.com/SolarisFlare/dtg/network)
-  - [Forks](https://github.com/SolarisFlare/dtg/network/members)
+  - [Pulse](https://github.com/optimizasean/dtg/pulse)
+  - [Contributors](https://github.com/optimizasean/dtg/graphs/contributors)
+  - [Commits](https://github.com/optimizasean/dtg/graphs/commit-activity)
+  - [Code Frequency](https://github.com/optimizasean/dtg/graphs/code-frequency)
+  - [Dependency Graph](https://github.com/optimizasean/dtg/network/dependencies)
+  - [Network](https://github.com/optimizasean/dtg/network)
+  - [Forks](https://github.com/optimizasean/dtg/network/members)
