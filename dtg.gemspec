@@ -56,7 +56,7 @@ Gem::Specification.new do |spec|
   # Bundler to manage gems ad versions
   spec.add_development_dependency 'bundler', '~> 1.17'
   # Rake to run tasks
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 13.0'
   # RSpec for testing suite
   spec.add_development_dependency 'rspec', '~> 3.0'
   # Prettier for better formatting
