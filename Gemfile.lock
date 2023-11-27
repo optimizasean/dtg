@@ -7,12 +7,20 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.3)
+    activesupport (7.1.2)
+      base64
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
+      mutex_m
       tzinfo (~> 2.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.4)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     coveralls (0.8.23)
       json (>= 1.8, < 3)
       simplecov (~> 0.16.1)
@@ -21,10 +29,13 @@ GEM
       tins (~> 1.6)
     diff-lcs (1.3)
     docile (1.3.2)
-    i18n (1.12.0)
+    drb (2.2.0)
+      ruby2_keywords
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.3.1)
-    minitest (5.18.0)
+    minitest (5.20.0)
+    mutex_m (0.2.0)
     prettier (0.15.0)
     rake (13.0.1)
     rspec (3.8.0)
@@ -40,6 +51,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.3)
+    ruby2_keywords (0.0.5)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
