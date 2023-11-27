@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name = 'dtg'
   spec.version = Dtg::VERSION
   spec.authors = %w[optimizasean]
-  spec.email = %w[seanmaika@hotmail.com]
+  spec.email = %w[optimizasean@gmail.com]
   spec.homepage = 'https://github.com/optimizasean/dtg/README.md'
   spec.summary = 'DTG converts from a DateTime to a DTG'
   spec.description =
