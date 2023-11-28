@@ -1,4 +1,5 @@
 require_relative 'date_time_group'
+require 'active_support'
 require 'active_support/core_ext/time'
 
 class Time

@@ -54,7 +54,7 @@ module DateTimeGroup
       year += year_temp - year_temp % 100
     end
     zone = UTC_ZONES[dtg_hash[:zone].downcase.to_sym].to_s
-    if zone.blank?
+    if zone.nil? | zone.strip.empty?
       zone = '+00:00'
     elsif zone == 'UTC'
       zone = '+00:00'
@@ -76,7 +76,7 @@ module DateTimeGroup
   end
 
   # Change will convert a DTG into a different zone with respect to its zone code
-  def self.convert(dtg, zone = :w)
+  def self.convert(dtg, zone = :z)
     old = from_dtg(dtg)
     old.to_dtg(zone)
   end

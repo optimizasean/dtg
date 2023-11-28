@@ -51,14 +51,14 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
 
   # Active support is necessary for ActiveSupport::TimeWithZone integration
-  spec.add_dependency 'activesupport'
+  spec.add_dependency 'activesupport', '~> 7.0.8'
 
   # Bundler to manage gems ad versions
-  spec.add_development_dependency 'bundler', '~> 1.17'
+  spec.add_development_dependency 'bundler', '~> 2.4.22'
   # Rake to run tasks
-  spec.add_development_dependency 'rake', '~> 13.0'
+  spec.add_development_dependency 'rake', '~> 13.1.0'
   # RSpec for testing suite
-  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rspec', '~> 3.12.0'
   # Prettier for better formatting
   spec.add_development_dependency 'prettier'
   # Coveralls for test suite reporting
