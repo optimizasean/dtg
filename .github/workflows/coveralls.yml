@@ -1,0 +1,26 @@
+on: ["push", "pull_request"]
+
+name: Test Coveralls
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - name: Use Ruby
+      uses: ruby/setup-ruby@v1
+      # Not required with .ruby-version file
+      # with:
+        # ruby-version: '3.2.2'
+
+    - name: bundle install and rspec test
+      run: |
+        bundle install
+        bundle exec rspec
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
