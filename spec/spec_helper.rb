@@ -1,6 +1,6 @@
 # Coveralls Configuration
-if ENV['GITHUB_TEST']
-  # When running in Travis, report coverage stats to Coveralls.
+if ENV['GITHUB_ACTIONS'] and ENV['COVERALLS_REPORT']
+  # When running in GitHub Actions, report coverage stats to Coveralls.
   require 'coveralls'
   Coveralls.wear!
 end
