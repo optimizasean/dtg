@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/optimizasean/dtg.svg?branch=master)](https://travis-ci.org/optimizasean/dtg)
-[![Coverage Status](https://coveralls.io/repos/github/optimizasean/dtg/badge.svg?branch=master)](https://coveralls.io/github/optimizasean/dtg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/optimizasean/dtg/badge.svg)](https://coveralls.io/github/optimizasean/dtg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/maintainability)](https://codeclimate.com/github/optimizasean/dtg/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c0d2545fedb195f5d647/test_coverage)](https://codeclimate.com/github/optimizasean/dtg/test_coverage)
 [![Inline docs](http://inch-ci.org/github/optimizasean/dtg.svg?branch=master)](http://inch-ci.org/github/optimizasean/dtg)
@@ -214,7 +214,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/SolarisFlare/dtg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/optimizasean/dtg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 If you want to contribute please let me know though either an email or you can just submit a pull request to add anything or open an issue and I can look through it with you!
 
@@ -224,7 +224,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Dtg project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/SolarisFlare/dtg/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Dtg project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/optimizasean/dtg/blob/master/CODE_OF_CONDUCT.md).
 
 ## Links and Files
 
