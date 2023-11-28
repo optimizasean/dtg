@@ -19,8 +19,9 @@ jobs:
 
     - name: bundle install and rspec test
       run: |
+        export COVERALLS_REPORT=true
         bundle install
-        bundle exec rspec
+        bundle exec rspec spec
 
     - name: Coveralls
       uses: coverallsapp/github-action@v2
